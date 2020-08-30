@@ -1,0 +1,13 @@
+<a
+href="#"
+class="list-group-item clearfix"
+(click)="itemClicked()"
+appBetterHighlight>
+  <div class="col-xs-9 pull-left">
+  <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+    <p class="list-group-item-text">{{recipe.desc}}</p>
+  </div>
+  <span class="col-xs-3 pull-left">
+  <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="image-responsive" style="max-height: 50px;">
+  </span>
+</a>
