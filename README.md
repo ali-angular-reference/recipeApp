@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
 
+It's part of the 'Angular - The complete guide' (https://www.udemy.com/course/the-complete-guide-to-angular-2/) course on udemy
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
