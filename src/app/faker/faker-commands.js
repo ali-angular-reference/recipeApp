@@ -16,6 +16,10 @@ class makeFakeDummyData{
   makeFakeIngredient(){
     return faker.food.ingredient()
   }
+
+  makeFakeNumber(){
+    return faker.random.number()
+  }
 }
 
 export default makeFakeDummyData;

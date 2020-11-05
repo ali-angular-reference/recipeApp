@@ -6,19 +6,21 @@ import { RecipeService } from './recipe.service';
   selector: 'app-recipe',
   templateUrl: './recipe.component.html',
   styleUrls: ['./recipe.component.css'],
-  providers: [RecipeService]
+  providers: [RecipeService] // this component and al child components get this instance of the recipe service
 })
 export class RecipeComponent implements OnInit {
   selectedRecipe: Recipe;
 
-  constructor(private recipeService:RecipeService){}
+  // listem for the item clicked event from the recipe service
+  constructor(private recipeService: RecipeService){}
 
   ngOnInit(): void {
-    // listen to the event emitter from the recipeservice
     this.recipeService.recipeSelected.subscribe(
       (recipe:Recipe)=>{
-        this.selectedRecipe = recipe
+        this.selectedRecipe = recipe; // set the selected recipe as the recipe that I got from the event
       }
-    )
+    );
   }
+
+  recipeReceived(){}
 }

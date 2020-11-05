@@ -1,6 +1,5 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../recipe.model';
-import { makeNRecipes } from '../../faker/recipe-creation';
 import { RecipeService } from '../recipe.service';
 
 @Component({
@@ -9,15 +8,11 @@ import { RecipeService } from '../recipe.service';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  recipes:Recipe[];
+  recipes: Recipe[];
 
-  // inject the service
-  constructor(private recipeService:RecipeService){
-
-  }
+  constructor(private recipeService: RecipeService) {}
 
   ngOnInit(): void {
     this.recipes = this.recipeService.getRecipes();
   }
-
 }
